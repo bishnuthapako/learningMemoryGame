@@ -74,13 +74,14 @@ document.addEventListener("DOMContentLoaded", function() {
     }
   
     function shuffle(array) {
-      let arrayCopy = array.slice();
+      let arrayCopy = array.slice(); // Just a trick to clone an array instead of referenceing it
       for (let idx1 = arrayCopy.length - 1; idx1 > 0; idx1--) {
         // generate a random index between 0 and idx1 (inclusive)
         let idx2 = Math.floor(Math.random() * (idx1 + 1));
   
         // swap elements at idx1 and idx2
         let temp = arrayCopy[idx1];
+        // debugger;
         arrayCopy[idx1] = arrayCopy[idx2];
         arrayCopy[idx2] = temp;
       }
